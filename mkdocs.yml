@@ -1,0 +1,6 @@
+site_name: AlphaBot2 platform research
+theme: readthedocs
+
+nav:
+    - Home: index.md
+    - PID tests: pid.md
