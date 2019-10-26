@@ -1,0 +1,3 @@
+inputs
+adafruit-circuitpython-neopixel
+smbus2

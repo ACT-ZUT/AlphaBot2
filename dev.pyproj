@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{834273e4-e362-42fd-b755-6608d2c27860}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>main.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>MSBuild|AlphaBot2-RPi|$(MSBuildProjectFullPath)</InterpreterId>
+    <Name>dev</Name>
+    <TestFramework>unittest</TestFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="main.py" />
+    <Compile Include="modules\AlphaBot2.py" />
+    <Compile Include="modules\demo\AlphaBot2.py" />
+    <Compile Include="modules\demo\Infrared_Obstacle_Avoidance.py" />
+    <Compile Include="modules\demo\IRremote.py" />
+    <Compile Include="modules\demo\Joystick.py" />
+    <Compile Include="modules\demo\Line_Follow.py" />
+    <Compile Include="modules\demo\PCA9685.py" />
+    <Compile Include="modules\demo\TRSensors.py" />
+    <Compile Include="modules\demo\Ultrasonic_Obstacle_Avoidance.py" />
+    <Compile Include="modules\demo\Ultrasonic_Ranging.py" />
+    <Compile Include="modules\demo\ws2812.py" />
+    <Compile Include="modules\gamepad.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="modules\sensors\Buzzer.py" />
+    <Compile Include="modules\sensors\IR.py" />
+    <Compile Include="modules\sensors\Joystick.py" />
+    <Compile Include="modules\sensors\LM293.py" />
+    <Compile Include="modules\sensors\PCA9685.py" />
+    <Compile Include="modules\sensors\SR04.py" />
+    <Compile Include="modules\sensors\TB6612FNG.py" />
+    <Compile Include="modules\sensors\TLC1543.py" />
+    <Compile Include="modules\sensors\WS2812B.py" />
+    <Compile Include="modules\sensors\__init__.py" />
+    <Compile Include="modules\tests\TestBottom.py" />
+    <Compile Include="modules\tests\TestMotor.py" />
+    <Compile Include="modules\tests\TestTop.py" />
+    <Compile Include="modules\tests\__init__.py" />
+    <Compile Include="modules\__init__.py" />
+    <Compile Include="test.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="modules" />
+    <Folder Include="modules\demo" />
+    <Folder Include="modules\sensors" />
+    <Folder Include="modules\tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="AlphaBot2-RPi\">
+      <Id>AlphaBot2-RPi</Id>
+      <Version>3.7</Version>
+      <Description>AlphaBot2-RPi (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
